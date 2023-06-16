@@ -25,7 +25,7 @@ const NotFound = {
 const routes = [
   {
     path: '/',
-    redirect: '/components'
+    redirect: '/snippets'
   },
   snippetsRoute,
   componentsRoute,

@@ -15,6 +15,7 @@ module.exports = defineConfig({
       .include.add(resolve('src/components'))
       .add(resolve('src/plugins'))
       .add(resolve('src/directives'))
+      .add(resolve('src/texts'))
       .end()
       .use('raw-loader')
       .loader('raw-loader')

@@ -2,10 +2,6 @@
   <svg data-v-17a60191="" data-v-13877386="" data-v-6805eed4="" version="1.0" xmlns="http://www.w3.org/2000/svg"
        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 160 110"
        preserveAspectRatio="xMidYMid meet" color-interpolation-filters="sRGB" style="margin: auto;">
-    <rect data-v-17a60191="" data-v-6805eed4="" x="0" y="0" width="100%" height="100%" fill="#fff" fill-opacity="0"
-          class="background"></rect>
-    <rect data-v-17a60191="" data-v-6805eed4="" x="0" y="0" width="100%" height="100%" fill="url(#watermark)"
-          fill-opacity="1" class="watermarklayer"></rect>
     <g data-v-17a60191="" data-v-6805eed4="" fill="#f07818" transform="translate(-10,7)"
        class="icon-text-wrapper icon-svg-group iconsvg">
       <g data-v-17a60191="" transform="matrix(1,0,0,1,60.22999572753906,0)" opacity="1" class="iconsvg-imagesvg">

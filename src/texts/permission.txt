@@ -1,0 +1,96 @@
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+import router, { getFirstMenuPath } from '@/router'
+import store from '@/store'
+import { getToken } from '@/utils'
+
+const whiteList = [
+  /^\/login(?:\/(?=$))?$/i,
+  /^\/not-found(?:\/(?=$))?$/i,
+  /^\/redirect\/((?:.*))(?:\/(?=$))?$/i
+]
+
+function hasRoute (path) {
+  const routesConfig = router.getRoutes()
+  return routesConfig.some(v => v.regex.test(path))
+}
+
+function hasPath (routes, path) {
+  return routes.some((route) => {
+    if (route.children && route.children.length > 0) {
+      return hasPath(route.children, path)
+    }
+    return route.path === path
+  })
+}
+
+router.beforeEach((to, from, next) => {
+  const hasToken = !!getToken()
+  const {
+    meta,
+    path,
+    fullPath
+  } = to
+  if (meta && meta.title) {
+    document.title = meta.title
+  }
+  NProgress.start()
+  if (whiteList.some((v) => v.test(path))) {
+    next()
+    NProgress.done()
+  } else if (!hasToken) {
+    next({
+      replace: true,
+      name: 'Login',
+      query: {
+        returnUrl: fullPath
+      }
+    })
+  } else {
+    if (hasRoute(path)) {
+      next()
+    } else {
+      store.dispatch('user/generateRoutes', path).then((permissionRoutes) => {
+        if (
+          permissionRoutes.length === 0 ||
+          (!hasPath(permissionRoutes, path) && path !== '/')
+        ) {
+          // 1、当前路径在菜单中不存在
+          // 2、当前路径(根路径"/"除外)在菜单中存在，但是没有权限（角色没有勾选该菜单)
+          next({
+            name: 'NotFound',
+            replace: true
+          })
+        } else if (path === '/') {
+          const redirectPath = getFirstMenuPath(permissionRoutes[0])
+          console.log('redirectPath: ', redirectPath)
+
+          next({
+            path: redirectPath,
+            replace: true
+          })
+        } else {
+          permissionRoutes.forEach((route) => {
+            router.addRoute(route)
+          })
+          next({
+            ...to,
+            replace: true
+          })
+        }
+        NProgress.done()
+      }).catch(() => {
+        next({
+          name: 'NotFound',
+          replace: true
+        })
+      })
+
+      NProgress.done()
+    }
+  }
+})
+
+router.afterEach(() => {
+  NProgress.done()
+})

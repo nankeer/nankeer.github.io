@@ -7,8 +7,14 @@ export default {
     icon: 'code-snippets'
   },
   component: Layout,
-  redirect: '/snippets/sudoku',
+  redirect: '/snippets/permission',
   children: [
+    {
+      path: 'permission',
+      meta: { title: 'Permission' },
+      name: 'SnippetsPermission',
+      component: () => import('@/views/permission/index')
+    },
     {
       path: 'sudoku',
       meta: { title: 'Sudoku' },

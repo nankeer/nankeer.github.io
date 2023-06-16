@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "node build-to-txt.js & vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "bootstrap": "^4.6.2",

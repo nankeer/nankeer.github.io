@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunksnippets_admin"]=self["webpackChunksnippets_admin"]||[]).push([[55],{96055:function(e,n,t){t.r(n),t.d(n,{default:function(){return p}});var s=function(){var e=this,n=e._self._c;return n("div",{staticClass:"page"},[e._v(e._s(e.$route.meta.title))])},a=[],i={name:"dayjs-index"},u=i,l=t(1001),r=(0,l.Z)(u,s,a,!1,null,"3ef4ae3e",null),p=r.exports}}]);
-//# sourceMappingURL=55.71b0617e.js.map

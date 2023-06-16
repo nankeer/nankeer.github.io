@@ -2,7 +2,10 @@ import Layout from '@/layout'
 
 export default {
   path: '/snippets',
-  meta: { title: 'Snippets', icon: 'code-snippets' },
+  meta: {
+    title: 'Snippets',
+    icon: 'code-snippets'
+  },
   component: Layout,
   redirect: '/snippets/sudoku',
   children: [
@@ -23,6 +26,12 @@ export default {
       meta: { title: 'ThreeColumns' },
       name: 'SnippetsThreeColumns',
       component: () => import('@/views/three-columns/index')
-    }
+    },
+    {
+      path: 'css-animations',
+      meta: { title: 'CSSAnimations' },
+      name: 'SnippetsCSSAnimations',
+      component: () => import('@/views/css-animations/index')
+    },
   ]
 }

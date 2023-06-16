@@ -1,0 +1,93 @@
+@import "mixins.scss";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/media";
+@import "bootstrap/scss/utilities";
+
+:root {
+  --bg-color: white;
+
+  --sudoku-item-min-height: 80px;
+
+  --two-columns-aside-width: 60px;
+  --two-columns-demo-height: 200px;
+
+  --three-columns-left-width: 60px;
+  --three-columns-right-width: 60px;
+  --three-columns-height: 160px;
+
+  --draggable-height: 300px;
+
+  --water-marker-demo-height: 300px;
+
+  @include media-breakpoint-up('md') {
+    --sudoku-item-min-height: 120px;
+
+    --two-columns-aside-width: 160px;
+    --two-columns-demo-height: 300px;
+
+    --three-columns-left-width: 120px;
+    --three-columns-right-width: 120px;
+    --three-columns-height: 260px;
+
+    --draggable-height: 250px;
+
+    --water-marker-demo-height: 400px;
+  }
+  @include media-breakpoint-up('lg') {
+    --sudoku-item-min-height: 200px;
+
+    --two-columns-aside-width: 260px;
+    --two-columns-demo-height: 500px;
+
+    --three-columns-left-width: 200px;
+    --three-columns-right-width: 200px;
+    --three-columns-height: 500px;
+
+    --draggable-height: 300px;
+
+    --water-marker-demo-height: 500px;
+  }
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-family:'HoangYen11', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: darken($body-bg, 2%);
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+}
+.container-xl {
+  max-width: 1440px;
+}
+.router-link-active {
+  color: $theme-color !important;
+}
+.page {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.source {
+  padding: 1rem;
+  background-color: $gray-100;
+}
+.theme-color {
+  color: $theme-color !important;
+}
+.source pre {
+  text-wrap: initial;
+}
+.collapse-transition {
+  transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
+}

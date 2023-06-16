@@ -1,0 +1,10 @@
+@import "bootstrap/scss/_functions.scss";
+
+//$theme-color: #0d9e5f;
+//$theme-color: #f8cd0f;
+$theme-color: #f07818;
+$primary: $theme-color;
+
+$header-height: 100px;
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/_mixins.scss";

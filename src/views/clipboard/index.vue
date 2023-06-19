@@ -48,7 +48,7 @@ export default {
 @import "@/assets/style/mixins.scss";
 
 .paragraph {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .clipboard-button {

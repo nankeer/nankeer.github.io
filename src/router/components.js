@@ -7,8 +7,14 @@ export default {
   redirect: '/components/element-icons',
   children: [
     {
+      path: 'transitions',
+      meta: { title: 'Transitions' },
+      name: 'ComponentsTransitions',
+      component: () => import('@/views/transitions/index')
+    },
+    {
       path: 'element-icons',
-      meta: { title: 'ElementIcons' },
+      meta: { title: 'ElIcons' },
       name: 'ComponentsElementIcons',
       component: () => import('@/views/element-icons/index')
     },
@@ -24,11 +30,5 @@ export default {
       name: 'ComponentUpload',
       component: () => import('@/views/upload/index')
     },
-    {
-      path: 'transitions',
-      meta: { title: 'Transitions' },
-      name: 'ComponentsTransitions',
-      component: () => import('@/views/transitions/index')
-    }
   ]
 }

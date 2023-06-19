@@ -39,5 +39,11 @@ export default {
       name: 'SnippetsCSSAnimations',
       component: () => import('@/views/css-animations/index')
     },
+    {
+      path: 'notification',
+      meta: { title: 'Notification' },
+      name: 'SnippetsNotification',
+      component: () => import('@/views/notification/index')
+    },
   ]
 }

@@ -7,10 +7,28 @@ export default {
   redirect: '/libraries/dayjs',
   children: [
     {
+      path: 'waypoints',
+      meta: { title: 'Waypoints' },
+      name: 'LibrariesWaypoints',
+      component: () => import('@/views/waypoints/index')
+    },
+    {
       path: 'dayjs',
       meta: { title: 'DayJS' },
       name: 'LibrariesDayJS',
       component: () => import('@/views/dayjs/index')
-    }
+    },
+    {
+      path: 'isotope-layout',
+      meta: { title: 'IsotopeLayout' },
+      name: 'LibrariesIsotopeLayout',
+      component: () => import('@/views/isotope-layout/index')
+    },
+    {
+      path: 'images-loaded',
+      meta: { title: 'ImagesLoaded' },
+      name: 'LibrariesImagesLoaded',
+      component: () => import('@/views/images-loaded/index')
+    },
   ],
 }

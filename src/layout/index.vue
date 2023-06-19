@@ -173,7 +173,7 @@ $brand-height: 80px;
 }
 .nav-link {
   margin-top: .5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0 .4em;
   text-transform: capitalize;
   text-decoration: none;

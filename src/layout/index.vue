@@ -192,6 +192,10 @@ $brand-height: 80px;
   padding: 1rem;
   position: sticky;
   top: calc($brand-height + 0.5rem);
+  .menus {
+    background: $body-bg;
+    padding: 1rem;
+  }
 }
 .page-area {
   background-color: $body-bg;
@@ -199,10 +203,10 @@ $brand-height: 80px;
 .menu-link {
   text-transform: capitalize;
   display: block;
-  line-height: 1.8em;
-  text-align: right;
+  text-align: center;
+  line-height: 1.6;
   color: $body-color;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: color .3s ease-in;
   @include hover () {

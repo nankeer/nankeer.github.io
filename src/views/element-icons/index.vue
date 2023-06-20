@@ -2,7 +2,7 @@
   <div class="page">
     <div class="row no-gutters text-center">
       <div class="col-sm-4 col-md-3 col-lg-2" v-for="item in icons" :key="item">
-        <div class="d-flex flex-column align-items-center justify-content-center px-3 py-4 demo-icon">
+        <div class="d-flex flex-column align-items-center px-3 py-4 demo-icon">
           <custom-icon class="icon" :name="item"></custom-icon>
           <div class="mt-2 icon-text">{{item}}</div>
         </div>
@@ -313,15 +313,16 @@ export default {
 @import "@/assets/style/mixins.scss";
 
 .icon {
-  font-size: 2rem;
+  font-size: 1.4rem;
+  flex-shrink: 0;
 }
 .icon-text {
   color: inherit;
-  font-family:'Regencie', sans-serif;
+  font-size: .85rem;
 }
 .demo-icon {
   background: white;
-  color: $gray-700;
+  color: inherit;
   height: 140px;
   transition: background .3s, color .3s;
   @include hover () {

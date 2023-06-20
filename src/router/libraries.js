@@ -4,7 +4,7 @@ export default {
   path: '/libraries',
   meta: { title: 'Libraries', icon: 'cha-jian' },
   component: Layout,
-  redirect: '/libraries/dayjs',
+  redirect: '/libraries/waypoints',
   children: [
     {
       path: 'waypoints',

@@ -45,5 +45,11 @@ export default {
       name: 'SnippetsNotification',
       component: () => import('@/views/notification/index')
     },
+    {
+      path: 'flip-your-animations',
+      meta: { title: 'FlipYourAnimations' },
+      name: 'SnippetsFlipYourAnimations',
+      component: () => import('@/views/flip-your-animations/index')
+    },
   ]
 }

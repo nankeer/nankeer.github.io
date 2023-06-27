@@ -16,14 +16,14 @@
   transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
 }
 // js
-import CollapseTransition from 'element-ui/<code style="color:#e83e8c;">lib</code>/transitions/collapse-transition'
-// element-ui/src/transitions/collapse-transition.js <code style="color:#e83e8c;">IT DOES NOT WORK!</code>
+import CollapseTransition from 'element-ui/<strong>lib</strong>/transitions/collapse-transition'
+// element-ui/src/transitions/collapse-transition.js <strong>IT DOES NOT WORK!</strong>
 export default {
   name: 'ElCollapseTransition',
   functional: true,
   render(h, { children }) {
     const data = {
-      on: new Transition() // <code style="color:#e83e8c;">IT DOES NOT WORK!</code> OwnProperty，NOT PrototypeMethod.
+      on: new Transition() // <strong>IT DOES NOT WORK!</strong> OwnProperty，NOT PrototypeMethod.
     };
 
     return h('transition', data, children);

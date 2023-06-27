@@ -17,7 +17,7 @@
     <div class="source">
       <pre class="mb-0">
 // index.html
-&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/<code style="color:#e83e8c;">4.1.1</code>/animate.min.css"/&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/<strong>4.1.1</strong>/animate.min.css"/&gt;
 // vue
 &lt;transition enter-active-class="animate__animated animate__bounce"&gt;
   &lt;div v-if="show"&gt;&lt;/div&gt;

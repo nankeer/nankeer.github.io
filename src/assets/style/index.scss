@@ -11,6 +11,7 @@
 @import "bootstrap/scss/utilities";
 
 :root {
+  --font-size: 20px;
   --bg-color: white;
   --animation-duration: 2s;
 
@@ -29,7 +30,10 @@
 
   --isotope-layout-filter-demo-height: 60px;
 
+  --pre-code-color: #e83e8c;
+
   @include media-breakpoint-up('md') {
+    --font-size: 18px;
     --sudoku-item-min-height: 120px;
 
     --two-columns-aside-width: 160px;
@@ -46,6 +50,7 @@
     --isotope-layout-filter-demo-height: 80px;
   }
   @include media-breakpoint-up('lg') {
+    --font-size: 16px;
     --sudoku-item-min-height: 200px;
 
     --two-columns-aside-width: 260px;
@@ -64,7 +69,7 @@
 }
 
 html {
-  font-size: $font-size-lg;
+  font-size: var(--font-size);
 }
 
 body {
@@ -103,6 +108,10 @@ body {
 
 .source pre {
   text-wrap: initial;
+}
+
+pre strong {
+  color: var(--pre-code-color) !important;
 }
 
 .collapse-transition {

@@ -41,7 +41,7 @@
           <aside class="d-none d-sm-block menus-area">
             <ul class="list-unstyled menus">
               <li v-for="item in menus" :key="item.path">
-                <router-link class="menu-link" :to="item.redirect || item.path">{{item.meta.title}}</router-link>
+                <router-link class="menu-link" :to="item.redirect || item.path">{{formatTitle(item.meta.title)}}</router-link>
               </li>
             </ul>
           </aside>
@@ -104,6 +104,9 @@ export default {
       }, {})
       this.$router.push({ path: item.path })
       this.menus = routes[item.path].children || []
+    },
+    formatTitle (title) {
+      return title.match(/([A-Z][a-z]+)/g).map(v => v.toLowerCase()).join(' ')
     },
   },
 }
@@ -203,10 +206,10 @@ $brand-height: 80px;
 .menu-link {
   text-transform: capitalize;
   display: block;
-  text-align: center;
-  line-height: 1.6;
+  text-align: left;
+  line-height: 1.8;
   color: $body-color;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: color .3s ease-in;
   @include hover () {

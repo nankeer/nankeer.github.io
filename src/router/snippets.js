@@ -51,5 +51,17 @@ export default {
       name: 'SnippetsFlipYourAnimations',
       component: () => import('@/views/flip-your-animations/index')
     },
+    {
+      path: 'visibility-and-animation',
+      meta: { title: 'VisibilityAnimation' },
+      name: 'SnippetsVisibilityAndAnimation',
+      component: () => import('@/views/visibility-and-animation/index')
+    },
+    {
+      path: 'geo3d',
+      meta: { title: 'Geo3D' },
+      name: 'SnippetsGeo3D',
+      component: () => import('@/views/geo3d/index')
+    },
   ]
 }

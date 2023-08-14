@@ -30,5 +30,11 @@ export default {
       name: 'LibrariesImagesLoaded',
       component: () => import('@/views/images-loaded/index')
     },
+    {
+      path: 'count-up',
+      meta: { title: 'CountUp' },
+      name: 'LibrariesCountUp',
+      component: () => import('@/views/count-up/index')
+    },
   ],
 }
